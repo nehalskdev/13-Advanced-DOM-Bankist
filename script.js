@@ -94,4 +94,5 @@ const link = document.querySelector('.twitter-link');
 console.log(link.href);
 console.log(link.getAttribute('href'));
 
-// 
+// data attribute
+console.log(logo.dataset.versionNumber);
