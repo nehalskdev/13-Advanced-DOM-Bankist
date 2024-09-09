@@ -55,13 +55,26 @@ header.append(message); // places as last child
 
 // header.append(message.cloneNode(true));
 
-header.before(message);
+// header.before(message);
 // header.after(message.cloneNode(true));
 
 // delete element
 document
   .querySelector('.btn--close-cookie')
   .addEventListener('click', function () {
-    // message.remove(); // Es6 method
+    message.remove(); // Es6 method
     // message.parentElement.removeChild(message); // pre ES6 method 
   });
+  
+// Style attributes and classes
+// styles
+
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(getComputedStyle(message).height);
+
+// css set property
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
