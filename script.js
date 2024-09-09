@@ -80,3 +80,9 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 // document.body.style.setProperty('background-color', 'yellow'); // expirimented by myself
 
 // attributes
+
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.getAttribute("designer"))// to get the non standarized attrb
+
+logo.alt = 'beautiful minimalist logo';
