@@ -82,7 +82,10 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 // attributes
 
 const logo = document.querySelector('.nav__logo');
-console.log(logo.alt);
+console.log(logo);
 console.log(logo.getAttribute("designer"))// to get the non standarized attrb
+logo.setAttribute("Company", "Bankist") // use setAttribute to add attrb
+
+
 
 logo.alt = 'beautiful minimalist logo';
