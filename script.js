@@ -96,3 +96,9 @@ console.log(link.getAttribute('href'));
 
 // data attribute
 console.log(logo.dataset.versionNumber);
+
+// classes
+// logo.classList.add('c', 'j');
+// logo.classList.remove();
+// logo.classList.toggle();
+// logo.classList.contains();
