@@ -48,7 +48,7 @@ message.classList.add('cookie-message');
 // message.textContent = 'We use cookies to improve analytics.';
 message.innerHTML =
   'We use cookies to improve analytics. <button class="btn btn--close-cookie">Got it!</button>';
-// header.prepend(message); // places as first child 
+// header.prepend(message); // places as first child
 header.append(message); // places as last child
 
 // how to add at multiple places at once
@@ -59,7 +59,9 @@ header.before(message);
 // header.after(message.cloneNode(true));
 
 // delete element
-document.querySelector('.btn--close-cookie').addEventListener('click', function () {
-  message.remove();
-});
-
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', function () {
+    // message.remove(); // Es6 method
+    // message.parentElement.removeChild(message); // pre ES6 method 
+  });
