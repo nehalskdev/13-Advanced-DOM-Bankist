@@ -85,7 +85,13 @@ const logo = document.querySelector('.nav__logo');
 console.log(logo);
 console.log(logo.getAttribute("designer"))// to get the non standarized attrb
 logo.setAttribute("Company", "Bankist") // use setAttribute to add attrb
-
+console.log(logo.getAttribute("src"));
 
 
 logo.alt = 'beautiful minimalist logo';
+
+const link = document.querySelector('.twitter-link');
+console.log(link.href);
+console.log(link.getAttribute('href'));
+
+// 
