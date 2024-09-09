@@ -77,4 +77,6 @@ console.log(getComputedStyle(message).height);
 // css set property
 
 document.documentElement.style.setProperty('--color-primary', 'orangered');
+// document.body.style.setProperty('background-color', 'yellow'); // expirimented by myself
 
+// attributes
