@@ -30,7 +30,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-///// 
+/////
 
 // const header = document.querySelector('.header');
 // const allSections = document.querySelectorAll('.section');
@@ -112,4 +112,18 @@ const section1 = document.querySelector('#section--1');
 btnScrollTo.addEventListener('click', function (e) {
   const s1Coords = section1.getBoundingClientRect();
   console.log(s1Coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  //scrolling
+  // window.scrollTo(
+  //   s1Coords.left + window.pageXOffset,
+  //   s1Coords.top + window.pageYOffset
+  // );
+
+  window.scrollTo({
+    left: s1Coords.left + window.pageXOffset,
+    top: s1Coords.top + window.pageYOffset,
+    behavior: 'smooth',
+  });
 });
