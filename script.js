@@ -112,17 +112,14 @@ const handleHover = function (e, opacity) {
     const logo = link.closest('.nav').querySelector('img');
 
     siblings.forEach(el => {
-      if (el !== link) el.style.opacity = opacity;
+      if (el !== link) el.style.opacity = this;
     });
-    logo.style.opacity = opacity;
+    logo.style.opacity = this;
   }
 };
-nav.addEventListener('mouseover', function (e) {
-  handleHover(e, 0.5);
-});
-nav.addEventListener('mouseout', function (e) {
-  handleHover(e, 1);
-});
+// passing argument into handler
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
 
 // const header = document.querySelector('.header');
 // const allSections = document.querySelectorAll('.section');
