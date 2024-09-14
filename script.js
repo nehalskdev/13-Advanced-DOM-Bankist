@@ -101,6 +101,9 @@ tabContainer.addEventListener('click', function (e) {
     .classList.add('operations__content--active');
 });
 
+// menu fade animation
+
+
 // const header = document.querySelector('.header');
 // const allSections = document.querySelectorAll('.section');
 // console.log(allSections);
