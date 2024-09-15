@@ -121,6 +121,16 @@ const handleHover = function (e) {
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
+// sticky navigation
+const iniialCoords = section1.getBoundingClientRect();
+console.log(iniialCoords);
+
+window.addEventListener('scroll', function (e) {
+  console.log(window.scrollY);
+  if (window.scrollY > iniialCoords.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+});
+
 // const header = document.querySelector('.header');
 // const allSections = document.querySelectorAll('.section');
 // console.log(allSections);
