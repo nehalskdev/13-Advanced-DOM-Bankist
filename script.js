@@ -217,6 +217,7 @@ imgTarget.forEach(img => imgObserver.observe(img));
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
+const Dotcontainer = document.querySelector('.dots');
 
 let curSlide = 0;
 const maxSLide = slides.length;
@@ -227,12 +228,25 @@ const maxSLide = slides.length;
 
 // 0%, 100% 200% 300%
 
+const createDots = function () {
+  slides.forEach(function (_, i) {
+    Dotcontainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class="dots__dot" data-slide="${i}"></button>`
+    );
+  });
+};
+
+createDots();
+
 const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
   );
 };
+
 goToSlide(0);
+
 //next slide
 
 const nextSlide = function () {
@@ -255,6 +269,14 @@ const prevSlide = function () {
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
+
+document.addEventListener('keydown', e => {
+  console.log(e);
+
+  if (e.key === 'ArrowLeft') prevSlide();
+});
+
+
 // curSlide = 1;
 // const header = document.querySelector('.header');
 // const allSections = document.querySelectorAll('.section');
